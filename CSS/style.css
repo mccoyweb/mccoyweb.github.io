@@ -37,6 +37,8 @@ h2 {
 
 #profile-pic {
 	border-radius: 8px;
+	max-width: 100%;
+	height: auto;
 }
 
 #portfolio {
