@@ -6,142 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Erik McCoy</title>
   <script src="https://use.fontawesome.com/c37bfc55ff.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-
-	<script
-			  src="https://code.jquery.com/jquery-3.1.0.min.js"
-			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-			  crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<link rel="stylesheet" type="text/css" href="CSS/style2.css">
 </head>
 
 <body>
-	<!-- NAV -->
-	<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Erik McCoy</a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <!-- nav links -->
-      <div class="collapse navbar-collapse" id="navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
+  <nav>
+    <ul id="nav-links">
+      <li class="nav-item"><a href="#about">About</a></li>
+      <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+      <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
-  <!-- /NAV -->
-  <!-- HOME -->
-  <div class="container" id="home">
-    <h1>Erik McCoy</h1>
-    <h3>Web Developer</h3>
-  </div>
-  <!-- ABOUT -->
-  <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>About Me</h2>
-          <p>Hello, my name is Erik. I grew up in New Hampshire and now live in Boston. I am working towards the full stack certification through <a href="https://www.freecodecamp.com">Free Code Camp</a>.</p>
-          <p>What I'm learning:</p>
-          <p>HTML5, CSS3, Bootstrap, JavaScript, jQuery, and React</p>
-        </div>
-        <div class="col-md-6">
-          <img id="profile-pic" src="images/profile.jpg" alt="Profile Picture">
+  <main>
+    <section id="home" class="white-text">
+      <h1>Erik McCoy</h1>
+      <h2>Web Developer</h2>
+    </section>
+    <section id="about">
+      <div class="flex-container" id="about-flex">   
+        <div id="pic-container"><img id="profile-pic" src="images/profile.jpg" alt="Profile Picture"></div>
+        <div id="about-me">
+          <h3>About Me</h3>
+          <p>Hello, my name is Erik. I’m a freelance web developer from New Hampshire now based in Boston, MA.</p> 
+          <p>You can check out some of my projects below. If you have any questions or are interested in working together, feel free to <a href="#contact">get in touch</a>.</p>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- PORTFOLIO -->
-  <div id="portfolio">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="http://codepen.io/emccoy/full/vGKJRV/"><img src="images/simon.jpg" alt="Simon Game"></a>
-            <div class="caption">
+    </section>
+    <section id="portfolio">
+      <h3 class="white-text">Portfolio</h3>
+      <div class="flex-container" id="portfolio-flex">
+        <div class="card">
+          <a href="http://codepen.io/emccoy/full/vGKJRV/">
+            <div class="thumbnail" style="background: white url(images/simon.jpg) no-repeat center;">
               <h3>Simon Game</h3>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="http://codepen.io/emccoy/full/RWOMVa/"><img src="images/wikipedia.jpg" alt="Wikipedia Viewer"></a>
-            <div class="caption">
+        <div class="card">
+          <a href="http://codepen.io/emccoy/full/RWOMVa/">
+            <div class="thumbnail" style="background: white url(images/wikipedia.jpg) no-repeat center;">
               <h3>Wikipedia Viewer</h3>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="http://codepen.io/emccoy/full/rOXRWm/"><img src="images/tictactoe.jpg" alt="Tic-tac-toe"></a>
-            <div class="caption">
+        <div class="card">
+          <a href="http://codepen.io/emccoy/full/rOXRWm/">
+            <div class="thumbnail" style="background: white url(images/tictactoe.jpg) no-repeat center;">
               <h3>Tic-tac-toe</h3>
             </div>
-          </div>
+          </a>
         </div>
-
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="http://codepen.io/emccoy/full/pjZedq/"><img src="images/calculator.jpg" alt="JavaScript Calculator"></a>
-            <div class="caption">
+        <div class="card">
+          <a href="http://codepen.io/emccoy/full/pjZedq/">
+            <div class="thumbnail" style="background: white url(images/calculator.jpg) no-repeat center;">
               <h3>JavaScript Calculator</h3>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="http://codepen.io/emccoy/full/jbOmXG/"><img src="images/pomodoro.jpg" alt="Pomodoro Timer"></a>
-            <div class="caption">
+        <div class="card">
+          <a href="http://codepen.io/emccoy/full/jbOmXG/">
+            <div class="thumbnail" style="background: white url(images/pomodoro.jpg) no-repeat center;">
               <h3>Pomodoro Timer</h3>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="http://codepen.io/emccoy/full/BNgmaP/"><img src="images/quote.jpg" alt="Quote Generator"></a>
-            <div class="caption">
+        <div class="card">
+          <a href="http://codepen.io/emccoy/full/BNgmaP/">
+            <div class="thumbnail" style="background: white url(images/quote.jpg) no-repeat center;">
               <h3>Quote Generator</h3>
             </div>
-          </div>
+          </a>
         </div>
-      </div>
-      <!-- /row -->
+    </section>
+
+    <div class="surf">
+      <div class="wave"></div>
+      <div class="wave"></div>
     </div>
-  </div>
-  <!-- CONTACT -->
-  <div id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p>Interested in getting in contact with me?</p>
-          <a class="btn btn-primary btn-lg" id="email-btn" href="mailto:erik.mccoy@gmail.com" role="button">Send me an email.</a>
+
+    <section id="contact">
+      <div class="flex-container" id="contact-flex">   
+        <div>
+          <p class="white-text">Interested in getting in contact with me?</p>
+          <a class="btn" href="mailto:erik.mccoy@gmail.com">Send me an email.</a>
         </div>
-        <div class="col-md-6">
+        <div class="white-text" id="find-me">
           <p>You can also find me on</p>
           <a title="GitHub" href="https://github.com/mccoyweb" aria-label="My GitHub page"><i class="fa fa-github" aria-hidden="true"></i></a>
           <a title="CodePen" href="http://codepen.io/emccoy" aria-label="My  CodePen"><i class="fa fa-codepen" aria-hidden="true"></i></a>
           <a title="Free Code Camp" href="https://www.freecodecamp.com/mccoyweb" aria-label="My Free Code Camp Portfolio"><i class="fa fa-fire" aria-hidden="true"></i></a>
         </div>
       </div>
-    </div>
-  </div>
-  <footer><p>Copyright © 2016 Erik McCoy</p></footer>
+    </section>
+
+  </main>
+  <footer>Copyright © 2019 Erik McCoy</footer>
 </body>
 
 </html>
