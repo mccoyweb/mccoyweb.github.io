@@ -112,6 +112,10 @@ img {
 	border-radius: .25rem;
 }
 
+.project-img:hover {
+	opacity: .75;
+}
+
 .tech {
 	margin-bottom: 0;
 }
@@ -240,11 +244,6 @@ footer p {
 		margin-right: 2rem;
 	}
 
-	.project-img {
-		width: 60%;
-		height: 100%;
-	}
-
 	.contact {
 		text-align: center;
 	}
@@ -289,8 +288,8 @@ footer p {
   }
 
 .slide-left {
-	-webkit-animation: 2s slide-left;
-	        animation: 2s slide-left;
+	-webkit-animation: 1.5s slide-left;
+	        animation: 1.5s slide-left;
   }
   
 @-webkit-keyframes slide-left {
