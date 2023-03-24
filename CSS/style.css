@@ -7,8 +7,8 @@
 	--clr-blue-700: hsl(217, 97%, 15%);
 	--clr-blue-500: hsl(217, 97%, 30%);
 	--clr-blue-200: hsl(176, 66%, 30%);
-	--clr-blue-100: hsl(217, 100%, 97%);
-	--clr-neutral-300: hsl(0, 0%, 14%);
+	--clr-blue-100: hsl(217, 100%, 98%);
+	--clr-neutral-300: hsl(217, 40%, 8%);
 
 	--clr-white: hsl(0, 0%, 100%);
 
@@ -28,10 +28,8 @@
 }
 
 body {
-	font-family: var(--ff-sans);
 	line-height: 1.5;
 	margin: 0;
-	color: var(--clr-neutral-300);
 }
 
 /* Make images easier to work with */
@@ -83,11 +81,7 @@ picture {
 	border: 1px solid black;
 	font-size: 1.2rem;
 	font-weight: 700;
-}
-
-.btn-dark {
-	border: 2px solid var(--clr-blue-200);
-	color: var(--clr-blue-200);
+	transition: -webkit-text-fill-color ease-in .5s, background-color ease-in .5s;
 }
 
 .btn-light {
@@ -95,9 +89,37 @@ picture {
 	margin-right: 1rem;
 }
 
+.btn-light:hover, .btn-light:focus {
+	-webkit-text-fill-color: var(--clr-blue-200);
+	background-color: var(--clr-white);
+}
+
+.btn-dark {
+	border: 2px solid var(--clr-blue-200);
+	color: var(--clr-blue-200);
+	background-image: linear-gradient(135deg, var(--clr-blue-500), var(--clr-blue-200));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-o-border-image: linear-gradient(135deg,#0244b0,#00cdac);
+		 border-image: linear-gradient(135deg,#0244b0,#00cdac);
+		border-image-slice: 1;
+}
+
+.btn-dark:hover, .btn-dark:focus {
+	-webkit-text-fill-color: var(--clr-white);
+	background-clip: border-box;
+}
+
 /* ------------------- */
 /* General             */
 /* ------------------- */
+
+body {
+font-family: var(--ff-sans);
+color: var(--clr-neutral-300);
+background-color: var(--clr-blue-100);
+}
 
 h1 {
 	font-size: 2rem;
@@ -113,16 +135,16 @@ h3 {
 	font-size: 1.25rem;
 }
 
-#hero {
-	background-image: linear-gradient(var(--clr-blue-100), var(--clr-white));
-}
-
 .intro-em {
 	background-color: var(--clr-blue-500);
 	background-image: linear-gradient(135deg, var(--clr-blue-500), var(--clr-blue-200));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
+}
+
+p .intro-em {
+	font-weight: 500;
 }
 
 .profile-img {
@@ -174,6 +196,10 @@ h3 {
 
 .tech {
 	margin-bottom: 0;
+}
+
+.contact {
+	text-align: center;
 }
 
 .contact p {
@@ -228,6 +254,10 @@ footer p {
 	color: #aaa;
 }
 
+/* ------------------- */
+/* Media queries       */
+/* ------------------- */
+
 @media screen and (min-width: 768px) {
 	h1 {
 		font-size: 2.4rem;
@@ -245,37 +275,23 @@ footer p {
 	p {
 		font-size: 1.2rem;
 	}
-	
-	.row {
-		display: flex;
-	}
-
-	.btn {
-		transition: -webkit-text-fill-color ease-in .5s, background-color ease-in .5s;
-	}
-
-	.btn-dark {
-		background-image: linear-gradient(135deg, var(--clr-blue-500), var(--clr-blue-200));
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-o-border-image: linear-gradient(135deg,#0244b0,#00cdac);
-		   border-image: linear-gradient(135deg,#0244b0,#00cdac);
-    	border-image-slice: 1;
-	}
-
-	.btn-dark:hover, .btn-dark:focus {
-		-webkit-text-fill-color: var(--clr-white);
-		background-clip: border-box;
-	}
-
-	.btn-light:hover, .btn-light:focus {
-		-webkit-text-fill-color: var(--clr-blue-200);
-		background-color: var(--clr-white);
-	}
 
 	#hero .container {
 		padding-bottom: 6%;
+	}
+
+	.contact-container {
+		padding: 2% 0 4% 0;
+	}
+}
+
+@media screen and (min-width: 921px) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	.row {
+		display: flex;
 	}
 
 	.profile-img {
@@ -300,22 +316,11 @@ footer p {
 		width: 40%;
 		margin-right: 2rem;
 	}
-
-	.contact {
-		text-align: center;
-	}
-
-	.contact-container {
-		padding: 4% 0;
-	}
 }
 
-@media screen and (min-width: 921px) {
-	h1 {
-		font-size: 3rem;
-	}
-}
-
+/* ------------------- */
+/* Animation           */
+/* ------------------- */
 
 .slide-right {
   -webkit-animation: 1s slide-right;
